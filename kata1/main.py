@@ -4,14 +4,19 @@
 
 """
 
-def sumarLista(string:str):
-    listaNumeros=string.split(",")
+import re
+
+
+def sumarstring(string:str):
+    listaNumeros=re.split(r'[,\n]', string)
+    
     print(listaNumeros)
     suma=0
     
     for numero in listaNumeros:
-        if numero:
+        if numero.strip():
             suma+=int(numero)
     return suma
+
 if __name__=="__main__":
-    print(sumarLista(input()))
+    print(sumarstring(input()))
