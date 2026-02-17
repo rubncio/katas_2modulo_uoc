@@ -5,10 +5,13 @@
 """
 
 def sumarLista(string:str):
-    listaNumeros:list[]=string.split(",")
+    listaNumeros=string.split(",")
+    print(listaNumeros)
     suma=0
+    
     for numero in listaNumeros:
-        suma+=int(numero)
+        if numero:
+            suma+=int(numero)
     return suma
 if __name__=="__main__":
-    pass
+    print(sumarLista(input()))
